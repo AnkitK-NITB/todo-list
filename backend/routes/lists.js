@@ -1,23 +1,20 @@
 const express = require('express')
 const router = express.Router()
+const {
+        getitems,
+        getItem,
+        addItem,
+} = require('../contollers/listController')
+
 
 // Get all items.
-router.get('/', (req,res)=>{
-        //TODO
-        res.json({msg:"Get all items."})
-})
+router.get('/', getitems)
 
 // Get a single item.
-router.get('/:id', (req,res)=>{
-        //TODO
-        res.json({msg:"Get a single item."})
-})
+router.get('/:id', getItem)
 
 // Add to todo list.
-router.post('/', (req,res)=>{
-        //TODO
-        res.json({msg:"Add to todo list."})
-})
+router.post('/', addItem)
 
 // Delete a single item.
 router.delete('/', (req,res)=>{
