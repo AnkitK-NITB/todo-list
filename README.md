@@ -1,2 +1,2 @@
 # todo-list
-A todo list react based app.
+A full-stack MERN app for your checklist.
