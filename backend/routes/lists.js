@@ -4,8 +4,9 @@ const {
         getitems,
         getItem,
         addItem,
+        deleteItem,
+        updateItem
 } = require('../contollers/listController')
-
 
 // Get all items.
 router.get('/', getitems)
@@ -17,15 +18,9 @@ router.get('/:id', getItem)
 router.post('/', addItem)
 
 // Delete a single item.
-router.delete('/', (req,res)=>{
-        //TODO
-        res.json({msg:"Delete a single item."})
-})
+router.delete('/:id', deleteItem)
 
 // Update a single item.
-router.patch('/', (req,res)=>{
-        //TODO
-        res.json({msg:"Update a single item."})
-})
+router.patch('/:id', updateItem)
 
 module.exports = router

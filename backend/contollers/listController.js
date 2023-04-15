@@ -13,7 +13,7 @@ const getItem = async (req,res)=>{
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).json({error: "Item not found."})
 
     const item = await List.findById(id)
-    if(!item) return res.status(404).json({error: "Item not found."})
+    if(!item) return res.status(400).json({error: "Item not found."})
     return res.status(200).json(item)
 }
 // Add to todo list.
@@ -26,11 +26,32 @@ const addItem = async (req,res)=>{
             res.status(400).json({error: err.message})
     }
 }
+
 // Delete a single item.
+const deleteItem = async (req,res)=>{
+    const { id } = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).json({error: "Item cannot be found."})
+    const item = await List.findOneAndDelete({_id: id})
+    if(!item) return res.status(400).json({error: "Item not found."})
+    return res.status(200).json(item)
+}
+
 // Update a single item.
+const updateItem = async (req,res)=>{
+    const { id } = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).json({error: "Item not found."})
+
+    const item = await List.findOneAndUpdate({_id: id}, {
+        ...req.body
+    })
+    if(!item) return res.status(400).json({error: "Item not found."})
+    return res.status(200).json(item)
+}
 
 module.exports = {
     getitems,
     getItem,
-    addItem
+    addItem,
+    deleteItem,
+    updateItem
 }
