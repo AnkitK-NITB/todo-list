@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react'
 
 //components
 import Itemdetails from '../components/ItemDetails'
+import ItemForm from '../components/ItemForm'
 
 const Home = ()=>{
     const [List, setList] = useState(null)
@@ -24,6 +25,7 @@ const Home = ()=>{
                     <Itemdetails key={item._id} item={item} />
                 ))}
             </div>
+            <ItemForm/>
         </div>
     )
 }
