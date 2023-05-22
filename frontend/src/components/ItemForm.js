@@ -7,7 +7,7 @@ const ItemForm = () => {
     const [title, setTitle] = useState('')
     const [description, setDesc] = useState('')
     const [err, setErr] = useState(null)
-
+    const [emptyFields, setEmptyFields] = useState([])
     const handleSubmit = async (e) => {
         e.preventDefault()
         const item = {title, description}
@@ -24,10 +24,12 @@ const ItemForm = () => {
             setTitle('')
             setDesc('')
             setErr(null)
+            setEmptyFields([])
         } else {
             setErr(json.error)
+            setEmptyFields(json.emptyFields)
+            console.log(json.emptyFields)
         }
-        console.log(json)
     }
     return (
         <form className="create" onSubmit={handleSubmit}>
@@ -38,12 +40,14 @@ const ItemForm = () => {
                 type="text"
                 onChange={(e)=>setTitle(e.target.value)}
                 value={title}
-            />
+                className={emptyFields.includes('title')?'error':''}
+                />
             <label>Description</label>
             <input
                 type="text"
                 onChange={(e)=>setDesc(e.target.value)}
                 value={description}
+                className={emptyFields.includes('description')?'error':''}
             />
             <button>Add Item</button>
             {err && <div className="error">{err}</div>}

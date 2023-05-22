@@ -19,11 +19,19 @@ const getItem = async (req,res)=>{
 // Add to todo list.
 const addItem = async (req,res)=>{
     const {title, description} = req.body
+    console.log("dgchsdhc")
+    let emptyFields = [];
+    if(!title)emptyFields.push('title')
+    if(!description)emptyFields.push('description')
+    if(emptyFields.length > 0){
+        return res.status(400).json({error: "Fill all the fields.", emptyFields})
+    }
+
     try{
-            const list = await List.create({title, description})
-            res.status(200).json(list)
+        const list = await List.create({title, description})
+        res.status(200).json(list)
     } catch(err){
-            res.status(400).json({error: err.message})
+        res.status(400).json({error: err.message})
     }
 }
 

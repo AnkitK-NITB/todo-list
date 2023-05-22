@@ -1,3 +1,8 @@
+:root {
+  --primary: green;
+  --error: red
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -23,4 +28,8 @@ body {
 
 label, input {
   display: block;
+}
+
+input.error {
+  border: 1px solid var(--error)
 }
