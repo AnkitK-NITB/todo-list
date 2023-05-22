@@ -1,6 +1,9 @@
 import { useState } from "react"
+import { useTodoContext } from '../hooks/useTodoContext'
 
 const ItemForm = () => {
+    const {dispatch} = useTodoContext()
+
     const [title, setTitle] = useState('')
     const [description, setDesc] = useState('')
     const [err, setErr] = useState(null)
@@ -17,6 +20,7 @@ const ItemForm = () => {
         })
         const json = await response.json()
         if(response.ok){
+            dispatch({type:'CREATE_ITEM', payload:json})
             setTitle('')
             setDesc('')
             setErr(null)
