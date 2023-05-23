@@ -26,4 +26,25 @@ Navigate to the project directory:
 
 Install the dependencies: 
 - `cd backend && npm install`
-- `cd frontend && npm install`
+- `cd frontend && npm install` (in another terminal)
+
+### .env file configuration
+Here's how you can prepare the .env file for the todo list application:
+
+1. Create a new file in the root directory of the project.
+2. Name the file .env.
+3. Open the .env file in a text editor.
+
+Inside the .env file, you can define the following environment variables:
+```
+PORT=port-value
+MONGO_URI=your-mongo-uri
+```
+Save the .env file once you have defined the necessary variables.
+
+## Usage
+To start the todo list application, run the following command:
+- `cd backend && npm start`
+- `cd backend && npm start` (in another terminal)
+
+Once the application is running, you can access it by opening your web browser and navigating to http://localhost:3000.
