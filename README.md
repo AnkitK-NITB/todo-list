@@ -60,7 +60,7 @@ Before contributing, please ensure that you have:
 - Familiarized yourself with the codebase and project structure.
 
 ## Acknowledgements
-- This application was built using (React)[reactjs.org].
+- This application was built using [React](reactjs.org).
 
 ## Contact
 If you have any questions, suggestions, or feedback, you can reach out to me at your-ankitkshwh003@gmail.com.
