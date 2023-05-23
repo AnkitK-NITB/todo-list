@@ -48,3 +48,19 @@ To start the todo list application, run the following command:
 - `cd backend && npm start` (in another terminal)
 
 Once the application is running, you can access it by opening your web browser and navigating to http://localhost:3000.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+Before contributing, please ensure that you have:
+
+- Set up the project locally by following the installation instructions.
+
+- Familiarized yourself with the codebase and project structure.
+
+## Acknowledgements
+- This application was built using (React)[reactjs.org].
+
+## Contact
+If you have any questions, suggestions, or feedback, you can reach out to me at your-ankitkshwh003@gmail.com.
