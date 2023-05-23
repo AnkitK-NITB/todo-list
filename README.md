@@ -1,24 +1,33 @@
-# todo-list
-Todo List
+#Todo List
 
 This is a simple todo list application that allows you to keep track of your tasks and manage your daily activities efficiently. With this application, you can add, update, and remove tasks as needed.
 
-Features
+##Features
+- Add tasks: You can add new tasks to your todo list by entering a task description.
 
-Add tasks: You can add new tasks to your todo list by entering a task description.
+- Update tasks: You can mark tasks as completed or modify their description.
 
-Update tasks: You can mark tasks as completed or modify their description.
+- Remove tasks: You can delete tasks from your todo list.
 
-Remove tasks: You can delete tasks from your todo list.
+- View tasks: You can view all your tasks
 
-View tasks: You can view all your tasks or filter them by completion status (completed or pending).
+## Todo
+- filter tasks by completion status (completed or pending).
 
-Installation
+##Installation
 
 To use this todo list application, follow these steps:
 
-Clone the repository: git clone https://github.com/AnkitK-NITB/todo-list.git
+Clone the repository:
+'''
+git clone https://github.com/AnkitK-NITB/todo-list.git
+'''
 
-Navigate to the project directory: cd todo-list
+Navigate to the project directory: '''
+cd todo-list
+'''
 
-Install the dependencies: npm install
+Install the dependencies: 
+'''
+npm install
+'''
