@@ -63,4 +63,4 @@ Before contributing, please ensure that you have:
 - This application was built using [React](reactjs.org).
 
 ## Contact
-If you have any questions, suggestions, or feedback, you can reach out to me at your-ankitkshwh003@gmail.com.
+If you have any questions, suggestions, or feedback, you can reach out to me at ankitkshwh003@gmail.com.
