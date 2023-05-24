@@ -5,14 +5,13 @@ This is a simple todo list application that allows you to keep track of your tas
 ## Features
 - Add tasks: You can add new tasks to your todo list by entering a task description.
 
-- Update tasks: You can mark tasks as completed or modify their description.
-
 - Remove tasks: You can delete tasks from your todo list.
 
 - View tasks: You can view all your tasks
 
 ## Todo
-- filter tasks by completion status (completed or pending).
+- Update tasks: You can mark tasks as completed or modify their description.
+- Filter tasks by completion status (completed or pending).
 
 ## Installation
 
